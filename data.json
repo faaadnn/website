@@ -1,0 +1,32 @@
+{
+  "blogs": [
+    {
+      "title": "Semiconductor trends in 2025: Pioneering the future of technology",
+      "date": "May 19, 2025",
+      "content": "The semiconductor industry is evolving rapidly with AI-driven chip designs, advanced packaging, and sustainable manufacturing. Learn about the latest innovations shaping the future of electronics.",
+      "image": "pic/blog1.avif",
+      "link": "https://www.hcltech.com/trends-and-insights/semiconductor-trends-in-2025-pioneering-the-future-of-technology?utm_source=chatgpt.com"
+    },
+    {
+      "title": "NIT-R, PMEC develop indigenous semiconductor chips for national innovation",
+      "date": "Sept 3, 2025",
+      "content": "Bhubaneswar: The National Institute of Technology (NIT), Rourkela, and the Parala Maharaj Engineering College (PMEC) in Berhampur have developed three chips which are part of the country's first ‘Made in India' semiconductor batch.",
+      "image": "pic/blog2.webp",
+      "link": "https://timesofindia.indiatimes.com/city/bhubaneswar/nit-r-pmec-develop-indigenous-semiconductor-chips-for-national-innovation/articleshow/123663697.cms?utm_source=chatgpt.com"
+    },
+    {
+      "title": "The Intersection of AI and Semiconductors",
+      "date": "March 15, 2025",
+      "content": "Artificial intelligence (AI) has become integral to our daily lives, and semiconductors are the backbone of AI systems. This blog explores advancements, implications, and opportunities at the intersection of AI and semiconductor technology.",
+      "link": "https://www.microchipusa.com/industry-news/the-intersection-of-ai-and-semiconductors-advancements-implications-and-future-opportunities?srsltid=AfmBOooU3p7QpnBV5Lrj0FW4yMLouuYOGBpkSzPwqns6ZjoQtqevcYOq"
+    }
+  ],
+  "news": [
+    {
+      "title": "ASEMI Officially Launches 1st Batch of Trainees",
+      "date": "September 2, 2025",
+      "content": "The Academy of Semiconductors (ASEMI) has officially welcomed its first cohort of trainees, marking a significant milestone in Malaysia’s journey toward building a highly skilled semiconductor workforce.",
+      "link": "news1.html"
+    }
+  ]
+}
