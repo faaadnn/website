@@ -1,0 +1,19 @@
+backend:
+  name: git-gateway
+  branch: main   # or "master" depending on your repo
+
+media_folder: "pic"        # where uploaded images go
+public_folder: "/pic"
+
+collections:
+  - name: "news"
+    label: "News"
+    folder: "data/news"
+    extension: "json"
+    format: "json"
+    create: true
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Date", name: "date", widget: "datetime" }
+      - { label: "Image", name: "image", widget: "image" }
+      - { label: "Content", name: "content", widget: "text" }
