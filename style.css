@@ -47,7 +47,7 @@ html {
 }
 
 section{
-    scroll-margin-top: 70px;
+    scroll-margin-top: 170px;
 }
 
 /*=========stylings for whole site==========*/
@@ -106,7 +106,7 @@ header {
 
 header .navbar{
     display: flex;
-    padding: 10px 20px;
+    padding: 3px 15px;
     align-items: center;
     justify-content: space-between;
 }
@@ -147,7 +147,7 @@ header .navbar{
 }
 
 .nav-logo .logo-img{
-    height: 200px; /*adjust size as needed*/
+    height: 300px; /*adjust size as needed*/
     width: auto; 
 }
 
@@ -155,7 +155,7 @@ header .navbar{
 .hero-section{
     min-height: 100vh;
     background: var(--primary-color);
-    padding-top: 100px;
+    padding-top: 150px;
 }
 
 .hero-section .section-content{
@@ -258,7 +258,7 @@ header .navbar{
 .about-section .about-details .text, .vision-section .vision-details .text, .mission-section .mission-details .text{
     line-height: 30px;
     margin: 10px auto 30px; /*auto center block*/
-    text-align: left;
+    text-align: justify;
     font-size: var(--font-size-m);
     max-width: 1200px; /*keep text in readable column */
     padding: 0 20px; /*adds some side breathing room*/
@@ -315,6 +315,25 @@ header .navbar{
   border-radius: 8px;
 }
 
+/* ===== HRD Corp Claimable Styling ===== */
+.program-section .hrdf-claimable {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-top: 25px;
+  margin-bottom: 30px;
+}
+
+.program-section .hrdf-logo {
+  width: 70px;   /* adjust logo size */
+  height: 70px;  /* make height same as width */
+  border-radius: 50%; /* round frame */
+  object-fit: cover; /* keep logo inside frame */
+  border: 2px solid #ddd; /* optional border */
+  padding: 5px; /* optional spacing inside circle */
+  background: #fff; /* white background inside circle */
+}
+
 /* Program details list */
 .program-section .list-icon {
   color: var(--secondary-color);     /* Makes icons blue (for Font Awesome icons) */
@@ -368,9 +387,8 @@ header .navbar{
 .team-section .team-list{
     display: flex;
     flex-wrap: wrap;
-    gap: 110px;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
 }
 
 .team-section .team-list .team-item{
@@ -379,7 +397,7 @@ header .navbar{
     text-align: center;
     flex-direction: column;
     justify-content: space-between;
-    width: calc(100% / 3 - 110px);
+    width: calc(100% / 3 - 110px)
 }
 
 .team-section .team-list .team-item .team-image{
@@ -435,94 +453,38 @@ header .navbar{
 }
 
 /*======facilities section=======*/
-.facilities-section{
-    text-align: center;
-    padding: 60px 20px;
-    background: var(--light-pink-color);
+.facilities-section {
+  padding: 50px 0;
+  background: var(--light-pink-color);
+  text-align: center;
 }
 
-.facilities-section .section-content{
-    padding: 0 0 60px;
-}
-
-.facilities-section h2{
-    text-align: center;
-    text-transform: uppercase;
-    font-size: var(--font-size-xl);
-    font-weight: var(--font-weight-bold);
-    margin-bottom: 40px;
-}
-
-.carousel{
-    position: relative;
-    width: 60%;
-    max-width: 600px;
-    margin: 0 auto 30px;
-    overflow: hidden;
-    border-radius: 10px;
-}
-
-.carousel img{
-    width: 75%;
-    display: none;
-    margin: 0 auto;
-    border-radius: 10px
-}
-
-.carousel img.active{
-    display: block;
-}
-
-.carousel .nav{
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    font-size: 30px;
-    color: black;
-    cursor: pointer;
-    background: rgba(255,255,255,0.7);
-    border-radius: 50%;
-    padding: 5px 10px;
-}
-
-.carousel .prev{
-    left: 10px;
-}
-
-.carousel .next{
-    right: 10px;
-}
-
-.facilities-list {
+.facilities-carousel {
   display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 30px;
+  gap: 20px;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  padding: 20px 0;
 }
 
-.facilities-list ul {
-  list-style: none;
-  padding: 0;
-  margin: 0 auto;
-  max-width: var(--site-max-width);
-  display: grid;
-  grid-template-columns: repeat(3, auto);
-  gap: 20px 50px;
-  justify-content:center;
-  text-align: left;
+.facility-item {
+  min-width: auto;
+  flex: 0 0 auto;
+  text-align: center;
 }
 
-.facilities-list li {
-  font-size: var(--font-size-m);
-  display: flex;
-  align-items: flex-start;
-  justify-content: flex-start;
+.facility-item img {
+  width: 400px;
+  height: 280px;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
 
-.facilities-list i {
-  color: black;
-  margin-right: 10px;
-  margin-top: 4px;
+.facility-label {
+  margin-top: 10px;
+  font-weight: bold;
+  color: #333;
 }
 
 /*==blog section==*/
@@ -583,7 +545,7 @@ header .navbar{
 .read-more-btn {
   display: inline-block;
   padding: 10px 20px;
-  background: #ff6b6b;      /* soft red/pink button */
+  background:#e63946;     
   color: white;
   text-decoration: none;
   font-weight: bold;
@@ -594,7 +556,7 @@ header .navbar{
 }
 
 .read-more-btn:hover {
-  background: #e63946;      /* darker red on hover */
+  background: #b42d37;      /* darker red on hover */
   transform: translateY(-2px);
   box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
 }
@@ -620,7 +582,7 @@ header .navbar{
   clear: both;
 }
 
-/*==news1 html news article==*/
+/*==news html news article==*/
 body{
     background: var(--light-pink-color);
 }
@@ -841,10 +803,6 @@ body{
     .team-section .team-list{
         gap: 60px;
     }
-    .team-section .team-list .team-item {
-         width: calc(100% / 3 - 60px);
-
-    }
 }
 
 /*responsive media query code for max width 900px*/
@@ -986,40 +944,15 @@ body{
         font-size: 32px;/*slightly smaller icons*/
         margin-bottom: 10px;
     }
-    /*===facilities/carousel section===*/
-    .facilities-section{
-        padding: 40px 15px;
-    }
 
-    /*shrink carousel container*/
-    .carousel{
-        width: 100%;
-        max-width: 400px; /*smaller for mobile*/
-    }
-
-    .carousel img{
-        width: 80%; /*take full width on mobile*/
-    }
-
-    /*adjust navigation button size*/
-    .carousel .nav{
-        font-size: 22px;
-        padding: 4px 8px;
-    }
-
-    /*facilities list should be single column on mobile */
-    .facilities-list ul{
-        grid-template-columns: 1fr; /*stack all items*/
-        gap: 15px;
-        text-align: left; /*keep icon + test aligned*/
-    }
-
-    .facilities-list li{
-        font-size:var(--font-size-s);
+    /*===facilities*/
+    .facility-item img {
+    width: 300px;   /* smaller than desktop */
+    height: 210px;
     }
 
     /*blog section*/
-    .blog-section {
+    .blog-section{
         padding: 40px 15px; /* reduce padding */
     }
 
@@ -1119,7 +1052,21 @@ body{
     .team-section .team-list .team-item {
          width: 100%;
     }
-}
+    .facilities-carousel {
+    gap: 10px;  /* reduce gap so images don’t look too spaced */
+    }
+
+    .facility-item img {
+        width: 100%;       /* take full width of container */
+        max-width: 250px;  /* but don’t go beyond this */
+        height: 180px;     /* shrink height to match smaller screens */
+    }
+
+    .facility-label {
+        font-size: 14px;   /* smaller text for labels */
+    }
+ }
+
 
 
 

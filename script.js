@@ -15,64 +15,9 @@ navLinks.forEach(link =>{
     link.addEventListener("click", () => menuOpenButton.click());
 });
 
-//=============================================
-//facalities carousel
-//=============================================
-const images = document.querySelectorAll(".carousel img");
-let index = 0;
-const prevBtn = document.querySelector(".carousel .prev");
-const nextBtn = document.querySelector(".carousel .next");
-const carousel = document.querySelector(".carousel");
-let autoSlide;
-
-//show image by index 
-function showImage(i) {
-    images.forEach(img => img.classList.remove("active"));
-    images[i].classList.add("active");
-}
-
-// next / prev functions
-function nextImage() {
-    index = (index + 1) % images.length;
-    showImage(index);
-}
-function prevImage() {
-    index = (index - 1 + images.length) % images.length;
-    showImage(index);
-}
-
-// auto-slide every 5s
-function startAutoSlide() {
-    autoSlide = setInterval(nextImage, 5000);
-}
-function stopAutoSlide() {
-    clearInterval(autoSlide);
-}
-
-// reset timer after manual click
-function resetAutoSlide() {
-    stopAutoSlide();
-    startAutoSlide();
-}
-
-// manual controls
-nextBtn.addEventListener("click", () => {
-    nextImage();
-    resetAutoSlide();
-});
-prevBtn.addEventListener("click", () => {
-    prevImage();
-    resetAutoSlide();
-});
-
-// pause auto-slide on hover
-carousel.addEventListener("mouseenter", stopAutoSlide);
-carousel.addEventListener("mouseleave", startAutoSlide);
-
-// start when page loads
-startAutoSlide();
-
+//====================================================
 // Blog and News
+//====================================================
 // Load blog and news data
 fetch('data.json')
   .then(response => response.json())
@@ -110,3 +55,4 @@ fetch('data.json')
     });
   })
   .catch(error => console.error('Error loading content:', error));
+
